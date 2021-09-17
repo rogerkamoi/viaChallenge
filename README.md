@@ -8,6 +8,7 @@ Tensorflow and Keras were adopted to process predictions
 
 to call the service: 
 http:\<hostadress\>/predict/\<sepallength\>/\<sepalwidth\>/\<petallength\>/\<petalwidth\>
+
 replace arguments with respective values
 
 >- Attempt to upload to Azure failed due to debug mode option - turn it to false did not work

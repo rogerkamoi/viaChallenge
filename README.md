@@ -11,5 +11,7 @@ http:\<hostadress\>/predict/\<sepallength\>/\<sepalwidth\>/\<petallength\>/\<pet
 
 replace arguments with respective values
 
->- Attempt to upload to Azure failed due to debug mode option - turn it to false did not work
+return value is the name of the specie: setosa, versicolor or virginica
+
+> Attempt to upload to Azure failed due to debug mode option - turn it to false did not work
 

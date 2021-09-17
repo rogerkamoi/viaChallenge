@@ -16,7 +16,7 @@ def index():
 # This endpoint handles all the logic necessary to id the flower to work.
 # It requires the desired model and the image in which to perform object detection.
 @app.route('/predict/<sepallength>/<sepalwidth>/<petallength>/<petalwidth>')
-def prediction(sepallength, sepalwidth, petallength, petalwidth):
+def prediction(sepallength=None, sepalwidth=None, petallength=None, petalwidth=None):
 
     # 1. VALIDATE INPUT DATA
     # TODO: INSERT VALIDATION CHECK ON PARAMETERS
@@ -24,7 +24,7 @@ def prediction(sepallength, sepalwidth, petallength, petalwidth):
     # raise HTTPException(status_code=415, detail="data format.")
 
     # 2. LOAD THE MODEL
-    model = keras.models.load_model('model/iris_model')
+    model = keras.models.load_model('./model/iris_model')
 
     # 3. CONVERT THE PARAMETERS TO NUMBERS BEFORE PRED
     X_test2 = np.array([[float(sepallength), float(
@@ -44,4 +44,4 @@ def prediction(sepallength, sepalwidth, petallength, petalwidth):
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

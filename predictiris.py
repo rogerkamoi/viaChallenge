@@ -11,7 +11,7 @@ def prediction(sepallength, sepalwidth, petallength, petalwidth):
     # raise HTTPException(status_code=415, detail="data format.")
 
     # 2. LOAD THE MODEL
-    model = keras.models.load_model('model/iris_model')
+    model = keras.models.load_model('./model/iris_model')
 
     # 3. CONVERT THE PARAMETERS TO NUMBERS BEFORE PRED
     X_test2 = np.array([[float(sepallength), float(
